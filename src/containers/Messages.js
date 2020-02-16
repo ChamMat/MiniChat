@@ -5,6 +5,7 @@ import Messages from 'src/components/Messages';
 const mapStateToProps = (state) => {
   return {
     messages: state.messages,
+    userName: state.username,
   };
 };
 

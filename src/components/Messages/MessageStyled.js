@@ -7,6 +7,12 @@ const MessageStyled = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
+
+  .author {
+    margin-left:2.2rem;
+    margin-bottom:.7rem;
+    font-weight: 700;
+  }
   
   .message {
     position:relative;
@@ -19,22 +25,28 @@ const MessageStyled = styled.div`
     padding:1rem;
     border-radius:2rem;
     margin-right: 3rem;
+
+    &::before{
+      content:"";
+      position:absolute;
+      top:-.7rem;
+      left:2rem;
+      border-top:solid 15px transparent;
+      border-right:solid 15px #fff;
+    }
+
   }
 
-  .message::before {
-    content:"";
-    position:absolute;
-    top:-.7rem;
-    left:2rem;
-    border-top:solid 15px transparent;
-    border-right:solid 15px #fff;
+  .ownMessage {
+    
   }
 
-  .author {
-    margin-left:2.2rem;
-    margin-bottom:.7rem;
-    font-weight: 700;
+  .myName {
+    text-align:right;
   }
+
+
+
 
 `;
 

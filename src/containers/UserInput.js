@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import UserInput from 'src/components/UserInput';
-import { changeMessageInput } from 'src/actions/app';
+import { changeMessageInput, sendMessageToState } from 'src/actions/app';
 
 
 const mapStateToProps = (state) => ({
@@ -12,6 +12,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   changeInputValue: (value) => {
     dispatch(changeMessageInput(value));
+  },
+  sendMessage: () => {
+    dispatch(sendMessageToState());
   },
 });
 
